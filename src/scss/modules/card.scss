@@ -1,0 +1,60 @@
+@use '../variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 531px;
+  height: 100%;
+  background-color: $white;
+  border-radius: 32px;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: 359px;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: max-content 1fr;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    align-self: start;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__date-delivery {
+    font-size: 14px;
+    color: $dark;
+    background-image: url('/img/delivery.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-left: 20px;
+  }
+
+  &__button {
+    min-width: 120px;
+    color: $white;
+    background-color: $light-orange;
+    border-radius: 32px;
+    padding: 8px 16px;
+  }
+
+  &__price {
+  }
+
+  &__button-text {
+    display: none;
+  }
+}
